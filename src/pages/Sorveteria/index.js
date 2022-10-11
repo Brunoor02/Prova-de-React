@@ -8,15 +8,20 @@ export default function Sorveteria(){
     const [resultado, setResultado] = useState(0);
 
     function Calcular(){
-        let total = 0
-
-        if(gramas > 1000) {
-            total = (gramas / 100 ) * 3
+        try {
+            let total = 0
+    
+            if(gramas > 1000) {
+                total = (gramas / 100 ) * 3
+            }
+            else{
+                total = (gramas / 100) * 3.50
+            }
+            setResultado(total)
+            
+        } catch (err) {
+            setResultado(err.message)
         }
-        else{
-            total = (gramas / 100) * 3.50
-        }
-        setResultado(total)
     }
 
     useEffect(() =>{

@@ -5,12 +5,15 @@ main{
         font-size: 3em;
     }
 
-    a{
+    a {
+        grid-template-rows: 50px 100px 50px 150px;
         text-decoration: none;
+        border: solid 2px;
         color: rgb(0, 0, 0);
+        width: 6.5em;
         font-size: 1.3em;
         padding: 10px 20px;
-        background-color: rgb(96, 202, 96);
+        background-color: rgb(113, 226, 156);
         border-radius: 20px;
     }
 

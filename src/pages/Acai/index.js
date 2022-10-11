@@ -11,11 +11,19 @@ export default function Acai () {
   const [resultado, setResultado] = useState(0);
 
   function calcular(){
-    let total = qtdPequena * 13.50 + qtdMedia * 15 + qtdGrande * 17.50;
-    let desc = total * desconto / 100;
+    try {
+      let total = qtdPequena * 13.50 + qtdMedia * 15 + qtdGrande * 17.50;
+      let desc = total * desconto / 100;
+  
+      let r = total - desc
+      
+      setResultado(r);
+      
+    } catch (err) {
+      setResultado(err.message)
+    }
 
-    let r = total - desc
-    setResultado(r);
+    
   }
 
   useEffect(() =>{
