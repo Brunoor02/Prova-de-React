@@ -10,6 +10,7 @@ export default function Home() {
             <div className="tituloHome">
                 <img src="/assets/images/casa.png" height={60} width={60} />
                 <h1>HOME DA PROVA</h1>
+                <img src="/assets/images/casa.png" height={60} width={60} />
             </div>
             <div className="links">
 

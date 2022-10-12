@@ -1,20 +1,67 @@
-main{
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    
-    h1{
-        font-size: 3em;
+.acaiPag {
+
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-around;
+    background-image: url("../../../public/assets/images/Acai.webp");
+    align-items: center;
+    height: 100vh;
+
+
+    .tituloAcai {
+        background-color: rgb(124, 87, 124);
+        display: flex;
+        padding: 20px;
+        width: 25%;
+        border-radius: 10em;
+        border: double 10px;
+        justify-content: center;
+        
+
+
+        h1 {
+            font-size: 3em;
+            color: rgb(80, 167, 80);
+            text-shadow:
+                -1px -1px 0px #0000,
+                -1px 1px 0px #000,
+                1px -1px 0px #ffffff8a,
+                1px 0px 0px #ffffff81;
+
+        }
     }
 
-    a {
-        grid-template-rows: 50px 100px 50px 150px;
-        text-decoration: none;
+    .eita {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+
+    .inputsAcai {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 4em;
         border: solid 2px;
-        color: rgb(0, 0, 0);
-        width: 6.5em;
-        font-size: 1.3em;
-        padding: 10px 20px;
-        background-color: rgb(113, 226, 156);
-        border-radius: 20px;
+        width: 30%;
+        background-color: white;
+        height: 25vh;
+        align-items: center;
+        font-weight: bold;
+        text-align: center;
+
+        input {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+
+            width: 222px;
+        }
+
     }
 
 }
