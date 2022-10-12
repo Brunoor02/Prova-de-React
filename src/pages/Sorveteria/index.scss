@@ -3,7 +3,30 @@
     flex-direction: column;
     width: 100%;
     justify-content: space-around;
-    background-image: url("../../../public/assets/images/Acai.webp");
+    background-image: url("../../../public/assets/images/sorvete.jpg");
     align-items: center;
     height: 100vh;
+
+
+    .tituloSorv {
+        background-color: rgb(124, 87, 124);
+        display: flex;
+        padding: 20px;
+        width: 25%;
+        border-radius: 10em;
+        border: double 10px;
+        justify-content: center;
+        
+
+
+        h1 {
+            color: rgb(212, 126, 205);
+            text-shadow:
+                -1px -1px 0px #0000,
+                -1px 1px 0px #000,
+                1px -1px 0px #ffffff8a,
+                1px 0px 0px #ffffff81;
+
+        }
+    }
 }

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from 'react-router-dom'
+import './index.scss'
 
 
 export default function Sorveteria(){
@@ -28,8 +29,12 @@ export default function Sorveteria(){
         Calcular()
     }, [gramas])
     return(
-        <main>
-            <h1>BANCA DE SORVETE</h1>
+        <main className="sorvPag">
+            <div className="tituloSorv">
+                <img src="/assets/images/casquinha.png"/>
+                <h1>BANCA DE SORVETE</h1>
+                <img src="/assets/images/casquinha.png"/>
+            </div>
                 <div>
                     <p>Gramas: <input type='number' value={gramas} onChange={e => setGramas(e.target.value)} /> </p>
                     <p>Total: {resultado}</p>
