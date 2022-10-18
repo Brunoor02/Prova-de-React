@@ -18,11 +18,16 @@ export default function Home() {
                     <Link to='/Acai'>Açaí</Link>
                     <Link to='Sorvete'>Sorveteria</Link>
                     <Link to='/Signo'>Signo</Link>
+                    <Link to='/Ingresso'>Ingresso</Link>
+                    <Link to='/Contar'>Contar</Link>
+                    <Link to='/Retangulo'>Retangulo</Link>
                 </div>
                 <div className="linksPags">
                     <Link to='/Salario'>Salario</Link>
                     <Link to='/Paradas'>Paradas</Link>
                     <Link to='/Temperatura'>Temperatura</Link>
+                    <Link to='/Orcamento'>Orçamento</Link>
+                    <Link to='/Linha'>Linha</Link>                    
                 </div>
             </div>
         </main>

@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './index.scss';
+import { calcularAcai } from "../../services";
 
 export default function Acai() {
   const [qtdPequena, setQtdPequena] = useState(0);
@@ -10,31 +11,21 @@ export default function Acai() {
   const [desconto, setDesconto] = useState(0);
   const [resultado, setResultado] = useState(0);
 
-  function calcular() {
-    try {
-      let total = qtdPequena * 13.50 + qtdMedia * 15 + qtdGrande * 17.50;
-      let desc = total * desconto / 100;
-
-      let r = total - desc
-
-      setResultado(r);
-
-    } catch (err) {
-      setResultado(err.message)
-    }
-
-
+  function Calcular() {
+    let x = calcularAcai(qtdPequena, qtdMedia, qtdGrande, desconto)
+    setResultado(x)
   }
 
   useEffect(() => {
-    calcular()
+    Calcular()
   }, [qtdPequena, qtdMedia, qtdGrande, desconto])
+
 
   return (
 
     <main className='acaiPag'>
       <div className='tituloAcai'>
-        <img src='/assets/images/fruta.png' className='acai1'/>
+        <img src='/assets/images/fruta.png' className='acai1' />
         <h1>Banca do Açaí</h1>
         <img src='/assets/images/fruta.png' className='acai2' />
       </div>
@@ -54,12 +45,12 @@ export default function Acai() {
             <p>Desconto <input type='number' value={desconto} onChange={e => setDesconto(e.target.value)} /></p>
           </div>
           <div>
-            <p>Total R${resultado}</p>
+            <p>{resultado}</p>
           </div>
         </div>
       </div>
 
-        <Link to='/'> Voltar para Home </Link>
+      <Link to='/'> Voltar para Home </Link>
     </main>
   );
 }

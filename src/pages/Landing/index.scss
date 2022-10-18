@@ -21,8 +21,21 @@
         width: 50%;
         margin-bottom: 15em;
 
+        a {
+            grid-template-rows: 50px 100px 50px 150px;
+            text-decoration: none;
+            border: solid 2px;
+            color: rgb(0, 0, 0);
+            width: 8.5em;
+            text-align: center;
+            font-size: 1.3em;
+            padding: 10px 20px;
+            background-color: rgb(113, 226, 156);
+            border-radius: 20px;
+        }
+
         .linksPags {
-            height: 30vh;
+            height: 45vh;
             display: flex;
             flex-direction: column;
             width: 50%;
